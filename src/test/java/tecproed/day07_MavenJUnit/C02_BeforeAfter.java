@@ -1,4 +1,4 @@
-package tecproed.Maven;
+package tecproed.day07_MavenJUnit;
 
 import org.junit.*;
 

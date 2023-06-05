@@ -1,4 +1,4 @@
-package tecproed.Maven;
+package tecproed.day06_Maven;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
 import org.openqa.selenium.By;
