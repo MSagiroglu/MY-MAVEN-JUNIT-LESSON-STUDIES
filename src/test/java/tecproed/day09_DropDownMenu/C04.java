@@ -16,4 +16,7 @@ public class C04 {
 12.“Calculate Costs” butonuna basin sonra “purchase” butonuna basin
 “Foreign currency cash was successfully purchased.” yazisinin ciktigini kontrol edin
      */
+    public static void main(String[] args) {
+        System.out.println();
+    }
 }
