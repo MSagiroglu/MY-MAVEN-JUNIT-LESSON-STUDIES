@@ -8,7 +8,10 @@ import tecproed.utilities.TestBase;
 
 public class C01_TestBaseDemo extends TestBase {
 
-        @Test
+
+
+
+    @Test
         public void test01() {
             //Techproeducation sayfasına gidelim
             driver.get("https://techproeducation.com");
