@@ -47,4 +47,12 @@ public class C03_Alerts extends TestBase {
         String sonucYazisi=driver.findElement(By.id("promptResult")).getText();
         Assert.assertTrue(sonucYazisi.contains("Mustafa"));
     }
+
+    @Test
+    public void test04() {
+        driver.get("https://demoqa.com/alerts");
+        driver.findElement(By.xpath("(//button)[3]")).click();
+        bekle(5);
+        acceptAlert();
+    }
 }

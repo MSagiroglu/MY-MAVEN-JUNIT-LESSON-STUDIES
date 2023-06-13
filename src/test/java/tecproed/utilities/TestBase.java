@@ -18,16 +18,16 @@ public abstract class TestBase {
      Bu class'a extends yaptigimiz test class'larindan ulabiliriz
  */
 
-    @Before
-    public void setUp() throws Exception {
-        WebDriverManager.chromedriver().setup();
-        driver=new ChromeDriver();
-        driver.manage().window().maximize();
-        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(15));
-    }
+   @Before
+   public void setUp() throws Exception {
+       WebDriverManager.chromedriver().setup();
+       driver=new ChromeDriver();
+       driver.manage().window().maximize();
+       driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(15));
+   }
 
     @After
-    public void tearDown() throws Exception {;
+    public void tearDown() throws Exception {
         driver.quit();
      }
 
@@ -66,7 +66,7 @@ public abstract class TestBase {
         select.selectByIndex(idx);
     }
     //Dropdown value
-    public void selectByValue(WebElement ddm,String text){
+    public  void selectByValue(WebElement ddm,String text){
         Select select=new Select(ddm);
         select.selectByValue(text);
     }
