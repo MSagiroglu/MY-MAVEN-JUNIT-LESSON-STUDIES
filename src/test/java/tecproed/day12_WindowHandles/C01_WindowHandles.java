@@ -43,6 +43,13 @@ public class C01_WindowHandles extends TestBase {
                 driver.switchTo().window(w);
             }
         }
+        //Lambda ile geçiş
+        /*
+        /*windowHandlesSeti.
+           stream().
+           filter(t->!t.equals(sayfa1Handle)).
+           forEach(t-> System.out.println("2.Sayfa Handle değeri : "+t));
+         */
 
 
         //  ikinci sayfa Title'ının "New Window" olduğunu test edin.
@@ -68,7 +75,7 @@ public class C01_WindowHandles extends TestBase {
     }
 
     @Test
-    public void test02() {//ist<String> pencereler=new ArrayList<>(driver.getWindowHandles()); ile çözüm
+    public void test02() {//List<String> pencereler=new ArrayList<>(driver.getWindowHandles()); ile çözüm
         //  https://the-internet.herokuapp.com/windows adresine gidin.
         driver.get("https://the-internet.herokuapp.com/windows");
         //  ilk sayfasının Handle degerini alın yazdırın
@@ -124,6 +131,9 @@ public class C01_WindowHandles extends TestBase {
         bekle(3);
 
         //  ikinci sayfa Title'ının "New Window" olduğunu test edin.
+        //driver.switchTo().window(String.valueOf(driver.getWindowHandles().hashCode()));
+        System.out.println(driver.getWindowHandles().toArray()[1].hashCode());
+        System.out.println(driver.getWindowHandles().toArray()[1].toString());
         driver.switchTo().window(driver.getWindowHandles().toArray()[1].toString());
         String actualTitleNewWindow = driver.getTitle();
         String expectedTitleNewWindow = "New Window";
