@@ -14,6 +14,8 @@ public class C01_Actions extends TestBase {
         bekle(3);
         driver.findElement(By.xpath("//i[@class='eicon-close']")).click();
         bekle(2);
+
+
         //sayfanın altına doğru gidelim
         Actions actions = new Actions(driver);
         actions.sendKeys(Keys.PAGE_DOWN, Keys.PAGE_DOWN, Keys.PAGE_DOWN, Keys.PAGE_DOWN, Keys.PAGE_DOWN).perform();
