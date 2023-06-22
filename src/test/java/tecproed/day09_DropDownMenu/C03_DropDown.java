@@ -25,13 +25,16 @@ public class C03_DropDown {
     }
 
     @Test
-    public void test01() {
+    public void test01() throws InterruptedException {
         //programming languages ddm den istediginiz 4 secenegi seciniz
         WebElement diller=driver.findElement(By.xpath("(//select)[6]"));
         Select select=new Select(diller);
         select.selectByIndex(0);
+        Thread.sleep(2000);
         select.selectByIndex(2);
+        Thread.sleep(2000);
         select.selectByIndex(3);
+        Thread.sleep(2000);
         select.selectByIndex(4);
         //Eğer sadece seçili olan optionlari yazdırmak istersek
         select.getAllSelectedOptions().forEach(w-> System.out.println(w.getText()));
