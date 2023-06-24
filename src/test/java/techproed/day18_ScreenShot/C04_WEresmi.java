@@ -32,5 +32,6 @@ public class C04_WEresmi extends TestBase {
         FileUtils.copyFile(sonucYazisi.getScreenshotAs(OutputType.FILE),new File(dosyaYolu));
 
 
+
     }
 }
