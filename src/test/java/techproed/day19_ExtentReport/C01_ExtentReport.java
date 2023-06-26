@@ -1,4 +1,4 @@
-package techproed.day19_ExtentReport_WebTables;
+package techproed.day19_ExtentReport;
 
 import com.aventstack.extentreports.ExtentReports;
 import com.aventstack.extentreports.ExtentTest;
@@ -24,7 +24,7 @@ public class C01_ExtentReport extends TestBase {
      */
     ExtentReports extentReports; //-->Raporlamayı başlatmak için kullanılan class
     ExtentHtmlReporter extentHtmlReporter;//-->Raporu HTML formatında düzenler
-    ExtentTest extentTest;//--> Test adınlarına eklemek istediğimiz bilgileri bu class ile oluştururuz
+    ExtentTest extentTest;//--> Test adımlarına eklemek istediğimiz bilgileri bu class ile oluştururuz
     @Test
     public void test01() {
         extentReports = new ExtentReports();
@@ -35,7 +35,7 @@ public class C01_ExtentReport extends TestBase {
 
         //Raporda gözükmesini isteğimiz bilgiler için
         extentReports.setSystemInfo("Browser","Chrome");
-        extentReports.setSystemInfo("Tester","Erol");
+        extentReports.setSystemInfo("Tester","Mustafa");
         extentHtmlReporter.config().setDocumentTitle("Extent Report");
         extentHtmlReporter.config().setReportName("Smoke Test Raporu");
 

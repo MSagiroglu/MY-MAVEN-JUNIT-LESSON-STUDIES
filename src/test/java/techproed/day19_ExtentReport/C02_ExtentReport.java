@@ -1,5 +1,4 @@
-package techproed.day19_ExtentReport_WebTables;
-import com.aventstack.extentreports.ExtentReports;
+package techproed.day19_ExtentReport;
 import org.junit.Test;
 import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
