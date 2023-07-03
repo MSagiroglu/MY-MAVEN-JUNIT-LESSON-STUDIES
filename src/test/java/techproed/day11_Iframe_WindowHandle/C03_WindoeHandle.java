@@ -4,7 +4,7 @@ import org.junit.Test;
 import org.openqa.selenium.WindowType;
 import techproed.utilities.TestBase;
 
-public class C03_WindoeHandle extends TestBase {
+public class  C03_WindoeHandle extends TestBase {
     /*
         Eger sayfaya gittikten sonra yeni sekme yada yeni bir pencereyle baska sayfaya gittikten sonra
         tekrar ilk actiginiz sayfaya dnmek isterseniz, ilk sayfaya driver.get() methoduyla gittikten sonra

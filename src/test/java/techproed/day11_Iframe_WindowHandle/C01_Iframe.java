@@ -24,16 +24,19 @@ public class C01_Iframe extends TestBase {
         assert metin.contains("black border");
         //➢    Ayrica 'Applications lists' yazisinin sayfada oldugunu test edelim
         driver.switchTo().frame(0);//index 0 'dan başlar
+
         //--> gecis yapmazsak Nosuchelementexception hatasi aliriz.
         String ApplicationList=driver.findElement(By.xpath("//h1")).getText();
         System.out.println("ApplicationList = " + ApplicationList);
         Assert.assertEquals("Applications lists",ApplicationList);
         //➢    Son olarak sayfa başlığındaki iframe yazisinin gorunur oldugunu test edin
          driver.switchTo().defaultContent();//sitedeki ana syfaya gideriz
+
         //driver.navigate().refresh();//driver.switchTo().defaultContent(); ile aynıdır
         //driver.get(driver.getCurrentUrl());//refresh ile aynıdır
         WebElement iFrame=driver.findElement(By.xpath("//h3"));
         assert iFrame.isDisplayed();
+
           /*
             Eğer iki tane iframe olsaydı ve 2. frame'e geçmek isteseydik index'i 1 almam gerekicekti
         <body>
