@@ -3,6 +3,7 @@ import org.junit.Assert;
 import org.junit.Ignore;
 import org.junit.Test;
 import org.openqa.selenium.By;
+import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebElement;
 import techproed.utilities.TestBase;
 
@@ -61,11 +62,12 @@ public class C02_Alerts extends TestBase {
         driver.get("https://testcenter.techproeducation.com/index.php?page=javascript-alerts");
         //3. butona tıklayın, uyarıdaki metin kutusuna isminizi yazin, OK butonuna
         driver.findElement(By.xpath("(//button)[3]")).click();
+        bekle(2);
         //tıklayın ve result mesajında isminizin görüntülendiğini doğrulayın.
         driver.switchTo().alert().sendKeys("mustafa");
-        bekle(3);
-        driver.switchTo().alert().accept();
         bekle(2);
+        driver.switchTo().alert().accept();
+
         WebElement resultMessage=driver.findElement(By.xpath("(//p)[2]"));
         String beklenenYazi="mustafa";
         Assert.assertTrue(resultMessage.getText().contains(beklenenYazi));

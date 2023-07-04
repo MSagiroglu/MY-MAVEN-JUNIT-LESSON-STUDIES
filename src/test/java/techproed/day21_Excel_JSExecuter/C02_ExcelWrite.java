@@ -21,7 +21,8 @@ public class C02_ExcelWrite {
         createCell(cell numarasi) methodu ile cell icine eklenecek veri icin setCellValue() methodu kullanarak istedigimiz
         veriyi ekleyebiliriz
          */
-        FileInputStream fis = new FileInputStream("src/test/java/techproed/resources/Capitals.xlsx");
+        String dosyaYolu = "src/test/java/techproed/resources/Capitals.xlsx";
+        FileInputStream fis = new FileInputStream(dosyaYolu);
         Workbook workbook = WorkbookFactory.create(fis);
         workbook.getSheet("Sheet1").getRow(0).createCell(2).setCellValue("NUFUS");
         workbook.getSheet("Sheet1").getRow(1).createCell(2).setCellValue("712816");
@@ -36,32 +37,12 @@ public class C02_ExcelWrite {
         fos(FileOutputStream).close() ve workbook.close() methodlariyla yaptigimiz islemleri sonlandirmis oluruz
          */
 
-        FileOutputStream fos=new FileOutputStream("src/test/java/techproed/resources/Capitals.xlsx");
+        FileOutputStream fos = new FileOutputStream(dosyaYolu);
         workbook.write(fos);
         fos.close();
         workbook.close();
     }
-
-
-            /*
-        ODEV1
-            1.satirdaki 2.hucreye gidelim ve yazdiralim
-            1.satirdaki 2.hucreyi bir string degiskene atayalim ve  yazdiralim
-            2.satir 4.cell'in afganistan'in baskenti oldugunu test  edelim
-            Satir sayisini bulalim
-            Fiziki olarak kullanilan satir sayisini bulun
-            Ingilizce Ulke isimleri ve baskentleri bir map olarak  kaydedelim
-         */
-        /*
-        ODEV2
-        Yeni bir test method olusturalim writeExcelTest()
-        Adimlari takip ederek 1.satira kadar gidelim
-        5.hucreye yeni bir cell olusturalim
-        Olusturdugumuz hucreye "Nufus" yazdiralim
-        2.satir nufus kolonuna 1500000 yazdiralim
-        10.satir nufus kolonuna 250000 yazdiralim
-        15.satir nufus kolonuna 54000 yazdiralim
-        Dosyayi kaydedelim
-        Dosyayi kapatalim
-         */
 }
+
+
+

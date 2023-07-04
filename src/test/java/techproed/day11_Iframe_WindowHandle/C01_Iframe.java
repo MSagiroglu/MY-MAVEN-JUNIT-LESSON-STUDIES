@@ -32,6 +32,7 @@ public class C01_Iframe extends TestBase {
         //➢    Son olarak sayfa başlığındaki iframe yazisinin gorunur oldugunu test edin
          driver.switchTo().defaultContent();//sitedeki ana syfaya gideriz
 
+
         //driver.navigate().refresh();//driver.switchTo().defaultContent(); ile aynıdır
         //driver.get(driver.getCurrentUrl());//refresh ile aynıdır
         WebElement iFrame=driver.findElement(By.xpath("//h3"));

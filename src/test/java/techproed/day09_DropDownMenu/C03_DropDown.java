@@ -48,6 +48,7 @@ public class C03_DropDown {
         //Seçtiğimiz seçeneklerin hepsini kaldıralım
         select.deselectAll();
 
+
        ////senKeys() metodu ile istediğimiz bir seçeneği gönderelim
        //diller.sendKeys("C#");
 

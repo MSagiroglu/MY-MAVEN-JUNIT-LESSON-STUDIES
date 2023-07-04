@@ -21,9 +21,10 @@ public class C01_ReadExcel {
     @Test
     public void readExcell() throws IOException {
         //Capitals.xlsx dosyasından 1. satır 2. sütundaki hücreyi yazdırın
-        FileInputStream fis = new FileInputStream("src/test/java/techproed/resources/Capitals.xlsx");
+        String dosyaYolu="src/test/java/techproed/resources/Capitals.xlsx";
+        FileInputStream fis = new FileInputStream(dosyaYolu);
         Workbook workbook = WorkbookFactory.create(fis);
-        System.out.println(workbook.getSheet("Sheet1").getRow(0).getCell(1).toString());
+        System.out.println(workbook.getSheet("Sheet1").getRow(0).getCell(1).toString());//1. satır 2. sütun --> index 0 'dan başlıyor.
 
         //3. Satır 1. sütun değerini yazdırın ve "France" olduğunu test edin
         System.out.println(workbook.getSheet("Sheet1").getRow(2).getCell(0).toString());
@@ -94,6 +95,7 @@ public class C01_ReadExcel {
         String satir3sutun1 = workbook.getSheet("Sheet1").getRow(2).getCell(0).toString();
         System.out.println("satir3sutun1 = " + satir3sutun1);
         Assert.assertEquals("France", satir3sutun1);
+        System.out.println("****************");
 
         //Kullanılan satır sayısın bulun
         System.out.println("Kullanilan satirsayisi " + workbook.getSheet("Sheet1").getPhysicalNumberOfRows());

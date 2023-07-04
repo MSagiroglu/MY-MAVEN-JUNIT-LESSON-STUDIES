@@ -32,23 +32,28 @@ public class C05_RadioButtonClassWork {
     }
 
     @Test
-    public void radioButton() {
+    public void radioButton() throws InterruptedException {
         //-https://www.facebook.com adresine gidin
-        driver.get("https://facebook.com");
-        //-“Create an Account” button’una basin
-        driver.findElement(By.xpath("(//a[@role='button'])[2]")).click();
-        // -“radio buttons” elementlerini locate edin
-        WebElement female= driver.findElement(By.xpath("(//*[@type='radio'])[1]"));
-        WebElement male= driver.findElement(By.xpath("(//*[@type='radio'])[1]"));
-        WebElement notr= driver.findElement(By.xpath("(//*[@type='radio'])[1]"));
+        driver.get("https://www.facebook.com");
 
+        //-Cookies’i kabul edin
+        //-“Create an Account” button’una basin
+        driver.findElement(By.xpath("//a[@ajaxify][1]")).click();
+
+        //-“radio buttons” elementlerini locate edin
+        WebElement female = driver.findElement(By.xpath("//label[text()='Kadın']"));
+        WebElement male = driver.findElement(By.xpath("//label[text()='Erkek']"));
+        WebElement custom = driver.findElement(By.xpath("//label[text()='Özel']"));
+
+        //-Secili degilse cinsiyet butonundan size uygun olani secin
         if (!male.isSelected()) {
             male.click();
         }
+
     }
 
     @After
     public void tearDown() throws Exception {
-        driver.close();
+       // driver.close();
     }
 }
