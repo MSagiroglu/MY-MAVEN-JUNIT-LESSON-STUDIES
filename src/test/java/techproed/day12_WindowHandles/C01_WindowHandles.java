@@ -36,7 +36,9 @@ public class C01_WindowHandles extends TestBase {
     handle degerini bilmedigim icin normal getWindowHandle ile driver'imi yeni pencereye geciremem. Bunu getWindowHandles()
     methoduyla acilan tum pencereleri bir Set'e assign edip , ilk actigimiz pencere degilse ikinci acilan yeni penceredir
     mantigiyla bir loop icinde cozebiliriz
- */     Set<String> pencereler=driver.getWindowHandles();
+
+ */
+        Set<String> pencereler=driver.getWindowHandles();
         for (String w:pencereler) {
             System.out.println(w);
             if (!w.equals(ilkSayfaHandle)){

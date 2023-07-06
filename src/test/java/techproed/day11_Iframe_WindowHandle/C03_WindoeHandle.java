@@ -1,5 +1,6 @@
 package techproed.day11_Iframe_WindowHandle;
 
+import org.junit.Assert;
 import org.junit.Test;
 import org.openqa.selenium.WindowType;
 import techproed.utilities.TestBase;
@@ -8,7 +9,7 @@ public class  C03_WindoeHandle extends TestBase {
     /*
         Eger sayfaya gittikten sonra yeni sekme yada yeni bir pencereyle baska sayfaya gittikten sonra
         tekrar ilk actiginiz sayfaya dnmek isterseniz, ilk sayfaya driver.get() methoduyla gittikten sonra
-        String bir degisken handle degerini assign ederseniz tekrar ilk acilan sayfaya donmek istediginizde
+        String bir degiskene handle degerini assign ederseniz tekrar ilk acilan sayfaya donmek istediginizde
         driver.switchTo().window(ilksayfaHandleDegeri) ile gecis yapabilirsiniz
          */
     @Test
@@ -16,6 +17,7 @@ public class  C03_WindoeHandle extends TestBase {
         //Window 1'de https://www.techproeducation.com adresine gidiniz
         driver.get("https://www.techproeducation.com");
         String techproWindowHandle=driver.getWindowHandle();
+
 
         //Başlığın "Techpro Education | Online It Courses & Bootcamps" olduğunu doğrulayın
         assert driver.getTitle().equals("Techpro Education | Online It Courses & Bootcamps");

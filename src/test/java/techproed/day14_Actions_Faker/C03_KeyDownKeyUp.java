@@ -12,7 +12,7 @@ public class C03_KeyDownKeyUp extends TestBase {
     public void test01() {
         //Google anasayfasına gidelim
         driver.get("https://google.com");
-        //arama kutusunda shift tusuna basılı olarak selenim yazdıralım ve shift tuşunu serbest bırakarak java yazdıralım
+        //arama kutusunda shift tusuna basılı olarak selenium yazdıralım ve shift tuşunu serbest bırakarak java yazdıralım
         WebElement aramaKutusu=driver.findElement(By.id("APjFqb"));
         Actions actions=new Actions(driver);
         actions.keyDown(aramaKutusu, Keys.SHIFT).//--> Arama Kutusunda shift tuşuna bastık
@@ -35,7 +35,7 @@ public class C03_KeyDownKeyUp extends TestBase {
 
         //arama kutusunda shift tusuna basılı olarak selenim yazdıralım ve shift tuşunu serbest bırakarak java yazdıralım
         WebElement aramaKutusu = driver.findElement(By.xpath("//*[@class='gLFyf']"));
-        aramaKutusu.sendKeys(Keys.SHIFT,"selenim",Keys.SHIFT,"-java",Keys.ENTER);
+        aramaKutusu.sendKeys(Keys.SHIFT,"selenium",Keys.SHIFT,"-java",Keys.ENTER);
     /*
     Mause işlemleri için actions class'ını kullanmamız gerekir. Fakat bir metin kutusundaki klavye işlemleri için
     actions class'ına kullanmadan sendKeys() methodu ile de istediğimiz bir metni büyük yazdırabilir,
@@ -62,5 +62,8 @@ public class C03_KeyDownKeyUp extends TestBase {
         driver.navigate().to("https://google.com");
         aramaKutusu = driver.findElement(By.xpath("//*[@class='gLFyf']"));
         aramaKutusu.sendKeys(Keys.CONTROL,"v",Keys.ENTER);
+        driver.navigate().to("https://google.com");
+        aramaKutusu = driver.findElement(By.xpath("//*[@class='gLFyf']"));
+        aramaKutusu.sendKeys("Selenium",Keys.CONTROL,"a",Keys.CONTROL,"x");
     }
 }

@@ -32,6 +32,7 @@ public class C01_Cookies extends TestBase {
             sayac++;
         }
 
+
         //3-Sayfadaki cookies sayisinin 5’den buyuk oldugunu test edin
         Assert.assertTrue(cookieSet.size() > 5);
 
