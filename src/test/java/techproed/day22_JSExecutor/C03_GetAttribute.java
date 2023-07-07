@@ -52,10 +52,23 @@ public class C03_GetAttribute extends TestBase {
         driver.get("https://www.priceline.com/");
         //Submit butonunun rengini Kirmizi yazınız
         WebElement button=driver.findElement(By.xpath("//*[text()='Find Your Hotel']"));
-        WebElement button2=driver.findElement(By.xpath("//*[@class=\"sc-dhKdcB gHFNRO sc-266892e-0 kULWIA\"]"));
+        //WebElement button2=driver.findElement(By.xpath("//*[@class=\"sc-dhKdcB gHFNRO sc-266892e-0 kULWIA\"]"));
         JavascriptExecutor js=(JavascriptExecutor) driver;
-        js.executeScript("arguments[0].style.background-color='red';",button2);
-        js.executeScript("arguments[0].style.color='yellow';",button);
+        //js.executeScript("arguments[0].style.background-color='red';",button2);
+        js.executeScript("arguments[0].style.color='red';",button);
+
+    }
+    @Test
+    public void test03() {
+        //https://www.priceline.com/ adresine gidiniz
+        driver.get("https://techproeducation.com/");
+        //Submit butonunun rengini Kirmizi yazınız
+        WebElement button=driver.findElement(By.xpath("(//*[@class=\"elementor-item elementor-item-active\"])[1]"));
+        //WebElement button2=driver.findElement(By.xpath("//*[@class=\"sc-dhKdcB gHFNRO sc-266892e-0 kULWIA\"]"));
+        bekle(2);
+        JavascriptExecutor js=(JavascriptExecutor) driver;
+        //js.executeScript("arguments[0].style.background-color='red';",button2);
+        js.executeScript("arguments[0].style.color='red';",button);
 
     }
 }

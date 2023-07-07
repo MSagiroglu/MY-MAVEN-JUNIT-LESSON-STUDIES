@@ -4,6 +4,7 @@ import org.junit.Test;
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.interactions.Actions;
 import techproed.utilities.TestBase;
 
 public class C01_JSExecutorScroll extends TestBase {
@@ -41,11 +42,11 @@ yaparız
         bekle(2);
         tumSayfaResmi();
         //Sayfayı en alta scroll yapalım
-        js.executeScript("window.scrollTo(0,document.body.scrollHeight)");
+        js.executeScript("window.scrollTo(0,document.body.scrollHeight)");//Keys.END
         bekle(2);
         tumSayfaResmi();
         //Sayfayi en üste scroll yapalım
-        js.executeScript("window.scrollTo(0,-document.body.scrollHeight)");
+        js.executeScript("window.scrollTo(0,-document.body.scrollHeight)");//Keys.HOME
         bekle(2);
         tumSayfaResmi();
     }
